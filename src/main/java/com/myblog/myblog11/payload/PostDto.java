@@ -1,19 +1,13 @@
-package com.myblog.myblog11.entity;
+package com.myblog.myblog11.payload;
 
-import com.myblog.myblog11.payload.PostDto;
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Entity
-@Table(name ="posts")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Post {
-    @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+public class PostDto {
     private long id;
     private String title;
     private String description;
@@ -49,7 +43,6 @@ public class Post {
 
     public void setContent(String content) {
         this.content = content;
-
 
 
     }
